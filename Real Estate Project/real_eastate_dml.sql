@@ -3,13 +3,13 @@ INSERT INTO realestatebooking.accounts (username, password, "user") VALUES (ARRA
 INSERT INTO realestatebooking.renter(email_ID, name, move_in_date, preferred_location, budget, contact)VALUES (ARRAY['Chris@gmail.com'], '{John Doe}', '2023-06-01', '{New York}', 2000, ARRAY['123-456-7890']), (ARRAY['SanaS@gmail.com'], '{Sana S}', '2023-06-01', '{Chicago}', 2000, ARRAY['123-456-7890']), (ARRAY['SrevedT@gmail.com'], '{Sreeved T}', '2023-06-01', '{New York}', 2000, ARRAY['123-456-7890']);
 
 
-INSERT INTO realestatebooking.Address (email_ID, Building_number, Street, City, State, ZipCode) VALUES (ARRAY['Chris.A@gmail.com'], '{1234}', '{Main St}', '{Chicago}', '{CA}', '{12345}'), (ARRAY['Sana.S@gmail.com'], '{5678}', '{Elm St}', '{Cali}', '{NY}', '{54321}'), (ARRAY['Sreeved.T@yahoocom'], '{91011}', '{Oak St}', '{Austin}', '{TX}', '{67890}');
+INSERT INTO realestatebooking.Address (email_ID, Building_number, Street, City, State, ZipCode) VALUES (ARRAY['Chris.C@gmail.com'], '{1234}', '{Main St}', '{Chicago}', '{CA}', '{12345}'), (ARRAY['Sana.P@gmail.com'], '{5678}', '{Elm St}', '{Cali}', '{NY}', '{54321}'), (ARRAY['Sreeved.P@yahoocom'], '{91011}', '{Oak St}', '{Austin}', '{TX}', '{67890}');
 
 
 
-INSERT INTO realestatebooking.Address (email_ID, Building_number, Street, City, State, ZipCode) VALUES ('{"Chris.A@gmail.com"}', '{"1234"}', '{"Main St"}', '{"Chicago"}', '{"CA"}', '{"12345"}'), ('{"Sana.S@gmail.com"}', '{"5678"}', '{"Elm St"}', '{"Cali"}', '{"NY"}', '{"54321"}'), ('{"Sreeved.T@yahoo.com"}', '{"91011"}', '{"Oak St"}', '{"Austin"}', '{"TX"}', '{"67890"}');
+INSERT INTO realestatebooking.Address (email_ID, Building_number, Street, City, State, ZipCode) VALUES ('{"Chris.B@gmail.com"}', '{1234}', '{"Main St"}', '{"Chicago"}', '{"CA"}', '{"12345"}'), ('{"Sana.Q@gmail.com"}', '{"5678"}', '{"Elm St"}', '{"Cali"}', '{"NY"}', '{"54321"}'), ('{"Sreeved.Q@yahoo.com"}', '{"91011"}', '{"Oak St"}', '{"Austin"}', '{"TX"}', '{67890}');
 
-INSERT INTO realestatebooking.Address (email_ID, Building_number, Street, City, State, ZipCode) VALUES (ARRAY['Chris.A@gmail.com'], '1234', 'Main St', 'Chicago', 'CA', '12345'), (ARRAY['Sana.S@gmail.com'], '5678', 'Elm St', 'Cali', 'NY', '54321'), (ARRAY['Sreeved.T@yahoocom'], '91011', 'Oak St', 'Austin', 'TX', '67890');
+INSERT INTO realestatebooking.Address (email_ID, Building_number, Street, City, State, ZipCode) VALUES (ARRAY['Chris.A@gmail.com'], '{1234}', '{Main St}', '{Chicago}', '{CA}', '{12345}'), (ARRAY['Sana.R@gmail.com'], '{5678}', '{Elm St}', '{Cali}', '{NY}', '{54321}'), (ARRAY['Sreeved.T@yahoocom'], '{91011}', '{Oak St}', '{Austin}', '{TX}', '{67890}');
 
 
 
@@ -20,7 +20,7 @@ INSERT INTO realestatebooking.agent (email_ID, name, job_title, contact) VALUES(
 INSERT INTO realestatebooking.booking (booking_id, email_id, property_id, credit_card_no) VALUES ('{"book0001"}', '{"Sana.S@gmail.com"}', '{"prop001"}', 123456789), ('{"book0002"}', '{"ChrisA@gmail.com"}', '{"prop002"}', 987654321), ('{"book0003"}', '{"SreevedT@yahoo.com"}', '{"prop003"}', 456789123);
 
 
-INSERT INTO realestatebooking.credit_card (credit_card_no, expiry_date, email_id) VALUES  ('{"123456789"}', '{"2025-12-31"}', '{"Sana.S@gmail.com"}'), ('{"987654321"}', '{"2024-06-30"}', '{"ChrisA@gmail.com"}'), ('{"456789123"}', '{"2023-09-15"}', '{"SreevedT@yahoo.com"}');
+INSERT INTO realestatebooking.credit_card (credit_card_no, expiry_date, email_id) VALUES  ('123456789', '{"2025-12-31"}', '{"Sana.S@gmail.com"}'), ('987654321', '{"2024-06-30"}', '{"ChrisA@gmail.com"}'), ('456789123', '{"2023-09-15"}', '{"SreevedT@yahoo.com"}');
 
 
 INSERT INTO realestatebooking.property (property_id, type, location, description, city, state) VALUES (ARRAY['prop1'], '{"Apartment"}', '{"Downtown"}', '{"Luxury apartment in the heart of the city"}', '{"Chicago"}', '{"IL"}'), (ARRAY['prop2'], '{"House"}', '{"Suburb"}', '{"Spacious 4 bedroom house with a backyard"}', '{"Dallas"}', '{"TX"}'), (ARRAY['prop3'], '{"Condo"}', '{"Beachfront"}', '{"Beautiful ocean view condo with balcony"}', '{"Miami"}', '{"FL"}');
@@ -36,15 +36,10 @@ INSERT INTO realestatebooking.commercial_building (property_id, square_footage, 
 
 INSERT INTO realestatebooking.apartment (property_id, square_footage, no_of_rooms, building_type) VALUES (ARRAY['prop1'], 1000.00, 2, '{"High-rise"}'),(ARRAY['prop2'], 1200.50, 3, '{"Mid-rise"}'), (ARRAY['prop3'], 800.25, 1, '{"Low-rise"}');
 
-INSERT INTO realestatebooking.neighborhood (property_id, vacation_homes, land) VALUES ('{"prop1"}', '{"Yes"}', 15000.00), ('{"prop2"}', '{"No"}', 20000.00), ('{"prop3"}', '{"Yes"}', 10000.00);
+INSERT INTO realestatebooking.neighborhood (property_id, vacation_homes, land) VALUES ('{"prop1"}', '{"Yes"}', '{red soil}'), ('{"prop2"}', '{"No"}', '{black soil}'), ('{"prop3"}', '{"Yes"}', '{black soil}');
 
-INSERT INTO realestatebooking.property_info(property_id, address, price, availability) VALUES (ARRAY['PROP1'], '{"1234 Main St, Chicago, CA 12345"}', 200000.00, true), (ARRAY['PROP2'], '{"5678 Elm St, Cali, NY 54321"}', 350000.00, false), (ARRAY['PROP3'], '{"91011 Oak St, Austin, TX 67890"}', 500000.00, true);
+INSERT INTO realestatebooking.property_info(property_id, address, price, availability) VALUES (ARRAY['prop1'], '{"1234 Main St, Chicago, CA 12345"}', 200000.00, true), (ARRAY['prop2'], '{"5678 Elm St, Cali, NY 54321"}', 350000.00, false), (ARRAY['prop3'], '{"91011 Oak St, Austin, TX 67890"}', 500000.00, true);
 
-INSERT INTO realestatebooking.property_info(property_id, address, price, availability) VALUES (ARRAY['P001'], '{"1234 Main St, Chicago, CA 12345"}', 500000, true);
-
-INSERT INTO realestatebooking.property_info(property_id, address, price, availability) VALUES (ARRAY['prop2'], '{"5678 Elm St, Cali, NY 54321"}', 700000, true);
-
-INSERT INTO realestatebooking.property_info(property_id, address, price, availability) VALUES (ARRAY['prop3'], '{"91011 Oak St, Austin, TX 67890"}', 900000, false);
 select * from realestatebooking.accounts;
 select * from realestatebooking.renter;
 select * from realestatebooking.Address;
@@ -53,10 +48,10 @@ select * from realestatebooking.booking;
 select * from realestatebooking.credit_card;
 select * from realestatebooking.property;
 select * from realestatebooking.reward_program;
-select * from realestatebooking.additional_property_info;
+
 select * from realestatebooking.houses;
 select * from realestatebooking.commercial_building;
 select * from realestatebooking.apartment;
 select * from realestatebooking.neighborhood;
-select * from realestatebooking.property_info;ooking.property_info(property_id varchar[] REFERENCES realestatebooking.property(property_id), address varchar[], price numeric(10,2),availability boolean);
-
+select * from realestatebooking.property_info;
+select * from realestatebooking.additional_property_info;
